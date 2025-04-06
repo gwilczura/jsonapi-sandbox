@@ -4,22 +4,23 @@ using JsonApiDotNetCore.Queries;
 using JsonApiDotNetCore.Repositories;
 using JsonApiDotNetCore.Resources;
 using JsonApiDotNetCore.Services;
+using Microsoft.Extensions.Logging;
 using System.Diagnostics.CodeAnalysis;
 using Wilczura.JsonApiTest.Data.Entities;
 
-namespace Wilczura.JsonApiTest.Services;
+namespace Wilczura.JsonApiTest.JsonApi.Services;
 
 public class PersonResourceService : JsonApiResourceService<Person, int>
 {
     public PersonResourceService(
-        IResourceRepositoryAccessor repositoryAccessor, 
-        IQueryLayerComposer queryLayerComposer, 
-        IPaginationContext paginationContext, 
-        IJsonApiOptions options, 
-        ILoggerFactory loggerFactory, 
-        IJsonApiRequest request, 
-        IResourceChangeTracker<Person> resourceChangeTracker, 
-        IResourceDefinitionAccessor resourceDefinitionAccessor) 
+        IResourceRepositoryAccessor repositoryAccessor,
+        IQueryLayerComposer queryLayerComposer,
+        IPaginationContext paginationContext,
+        IJsonApiOptions options,
+        ILoggerFactory loggerFactory,
+        IJsonApiRequest request,
+        IResourceChangeTracker<Person> resourceChangeTracker,
+        IResourceDefinitionAccessor resourceDefinitionAccessor)
         : base(repositoryAccessor, queryLayerComposer, paginationContext, options, loggerFactory, request, resourceChangeTracker, resourceDefinitionAccessor)
     {
     }
@@ -62,10 +63,5 @@ public class PersonResourceService : JsonApiResourceService<Person, int>
     public override Task RemoveFromToManyRelationshipAsync([DisallowNull] int leftId, string relationshipName, ISet<IIdentifiable> rightResourceIds, CancellationToken cancellationToken)
     {
         return base.RemoveFromToManyRelationshipAsync(leftId, relationshipName, rightResourceIds, cancellationToken);
-    }
-
-    protected override Task InitializeResourceAsync(Person resourceForDatabase, CancellationToken cancellationToken)
-    {
-        return base.InitializeResourceAsync(resourceForDatabase, cancellationToken);
-    }
+    } 
 }
