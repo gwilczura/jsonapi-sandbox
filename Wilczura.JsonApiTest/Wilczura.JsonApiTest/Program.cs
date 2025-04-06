@@ -1,10 +1,11 @@
 using JsonApiDotNetCore.Configuration;
+using Wilczura.Common.JsonApi.Repositories;
+using Wilczura.Common.Ports.Repositories;
 using Wilczura.JsonApiTest.Adapters.ServiceBus.Publishers;
 using Wilczura.JsonApiTest.Common;
 using Wilczura.JsonApiTest.Data;
 using Wilczura.JsonApiTest.Data.Repositories;
 using Wilczura.JsonApiTest.Extensions;
-using Wilczura.JsonApiTest.JsonApi.Common;
 using Wilczura.JsonApiTest.JsonApi.Definitions;
 using Wilczura.JsonApiTest.JsonApi.Repositories;
 using Wilczura.JsonApiTest.JsonApi.Services;
@@ -19,7 +20,7 @@ var logger = builder.GetStartupLogger();
 builder.AddPostgres(string.Empty,"products", logger);
 
 builder.Services.AddTransient(typeof(GregControllerDependencies<,>));
-builder.Services.AddTransient(typeof(GregResourceDependencies));
+builder.Services.AddTransient(typeof(GregRepositoryDependencies));
 builder.Services.AddTransient<IOutboxRepository, OutboxRepository>();
 builder.Services.AddScoped<IDbContextProvider, DbContextProvider>();
 builder.Services.AddScoped<IEntityChangedPublisher, EntityChangedPublisher>();

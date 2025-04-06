@@ -1,7 +1,7 @@
 ﻿using JsonApiDotNetCore.Repositories;
-using Wilczura.JsonApiTest.Ports.Repositories;
+using Wilczura.Common.Ports.Repositories;
 
-namespace Wilczura.JsonApiTest.JsonApi.Common;
+namespace Wilczura.Common.JsonApi.Repositories;
 
 public class DbContextProvider : IDbContextProvider
 {

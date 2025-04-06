@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Wilczura.Common.Ports.Repositories;
 using Wilczura.JsonApiTest.Data.Entities;
 using Wilczura.JsonApiTest.Ports.Repositories;
 

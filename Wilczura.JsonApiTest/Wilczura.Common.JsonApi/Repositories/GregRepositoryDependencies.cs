@@ -4,18 +4,18 @@ using JsonApiDotNetCore.Repositories;
 using JsonApiDotNetCore.Resources;
 using Microsoft.Extensions.Logging;
 
-namespace Wilczura.JsonApiTest.JsonApi.Common;
+namespace Wilczura.Common.JsonApi.Repositories;
 
-public class GregResourceDependencies
+public class GregRepositoryDependencies
 {
-    public GregResourceDependencies(
-        ITargetedFields targetedFields, 
-        IDbContextResolver dbContextResolver, 
-        IResourceGraph resourceGraph, 
+    public GregRepositoryDependencies(
+        ITargetedFields targetedFields,
+        IDbContextResolver dbContextResolver,
+        IResourceGraph resourceGraph,
         IResourceFactory resourceFactory,
-        IEnumerable<IQueryConstraintProvider> constraintProviders, 
-        ILoggerFactory loggerFactory, 
-        IResourceDefinitionAccessor resourceDefinitionAccessor) 
+        IEnumerable<IQueryConstraintProvider> constraintProviders,
+        ILoggerFactory loggerFactory,
+        IResourceDefinitionAccessor resourceDefinitionAccessor)
     {
         TargetedFields = targetedFields;
         DbContextResolver = dbContextResolver;

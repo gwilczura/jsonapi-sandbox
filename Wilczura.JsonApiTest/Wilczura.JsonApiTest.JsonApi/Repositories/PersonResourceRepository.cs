@@ -1,12 +1,12 @@
 ﻿using JsonApiDotNetCore.Queries;
+using Wilczura.Common.JsonApi.Repositories;
 using Wilczura.JsonApiTest.Data.Entities;
-using Wilczura.JsonApiTest.JsonApi.Common;
 
 namespace Wilczura.JsonApiTest.JsonApi.Repositories;
 
 public class PersonResourceRepository : GregResourceRepository<Person, int>
 {
-    public PersonResourceRepository(GregResourceDependencies dependencies) : base(dependencies)
+    public PersonResourceRepository(GregRepositoryDependencies dependencies) : base(dependencies)
     {
     }
 
