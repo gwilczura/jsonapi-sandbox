@@ -1,15 +1,16 @@
 ﻿using JsonApiDotNetCore.Configuration;
 using JsonApiDotNetCore.Resources;
 using JsonApiDotNetCore.Services;
+using Microsoft.Extensions.Logging;
 
-namespace Wilczura.JsonApiTest.Common;
+namespace Wilczura.Common.JsonApi.Controllers;
 
-public class GregControllerDependencies<TResource, TId>  where TResource : class, IIdentifiable<TId>
+public class CustomControllerDependencies<TResource, TId> where TResource : class, IIdentifiable<TId>
 {
-    public GregControllerDependencies(
-        IJsonApiOptions options, 
-        IResourceGraph resourceGraph, 
-        ILoggerFactory loggerFactory, 
+    public CustomControllerDependencies(
+        IJsonApiOptions options,
+        IResourceGraph resourceGraph,
+        ILoggerFactory loggerFactory,
         IResourceService<TResource, TId> resourceService)
     {
         Options = options;

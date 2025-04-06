@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Wilczura.JsonApiTest.Common;
+using Wilczura.Common.JsonApi.Controllers;
 using Wilczura.JsonApiTest.Data.Entities;
 
 namespace Wilczura.JsonApiTest.Controllers;
 
 [Route("[controller]")]
-public class PersonsController : GregController<Person, int>
+public class PersonsController : CustomController<Person, int>
 {
-    public PersonsController(GregControllerDependencies<Person,int> dependencies) 
+    public PersonsController(CustomControllerDependencies<Person,int> dependencies) 
         : base(dependencies)
     {
     }

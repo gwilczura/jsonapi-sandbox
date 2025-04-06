@@ -4,9 +4,9 @@ using Wilczura.JsonApiTest.Data.Entities;
 
 namespace Wilczura.JsonApiTest.JsonApi.Repositories;
 
-public class PersonResourceRepository : GregResourceRepository<Person, int>
+public class PersonResourceRepository : CustomResourceRepository<Person, int>
 {
-    public PersonResourceRepository(GregRepositoryDependencies dependencies) : base(dependencies)
+    public PersonResourceRepository(CustomResourceRepositoryDependencies dependencies) : base(dependencies)
     {
     }
 

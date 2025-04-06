@@ -1,4 +1,4 @@
-﻿using Wilczura.JsonApiTest.Ports.Publishers;
+﻿using Wilczura.Common.Ports.Publishers;
 
 namespace Wilczura.JsonApiTest.Adapters.ServiceBus.Publishers;
 

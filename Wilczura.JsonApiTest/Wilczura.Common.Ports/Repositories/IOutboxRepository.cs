@@ -1,4 +1,4 @@
-﻿namespace Wilczura.JsonApiTest.Ports.Repositories;
+﻿namespace Wilczura.Common.Ports.Repositories;
 
 public interface IOutboxRepository
 {

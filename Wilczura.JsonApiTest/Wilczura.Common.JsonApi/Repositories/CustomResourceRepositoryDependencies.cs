@@ -6,9 +6,9 @@ using Microsoft.Extensions.Logging;
 
 namespace Wilczura.Common.JsonApi.Repositories;
 
-public class GregRepositoryDependencies
+public class CustomResourceRepositoryDependencies
 {
-    public GregRepositoryDependencies(
+    public CustomResourceRepositoryDependencies(
         ITargetedFields targetedFields,
         IDbContextResolver dbContextResolver,
         IResourceGraph resourceGraph,

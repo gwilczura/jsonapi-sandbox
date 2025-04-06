@@ -1,4 +1,4 @@
-﻿namespace Wilczura.JsonApiTest.Ports.Publishers;
+﻿namespace Wilczura.Common.Ports.Publishers;
 
 public interface IEntityChangedPublisher
 {

@@ -3,11 +3,11 @@ using JsonApiDotNetCore.Resources;
 
 namespace Wilczura.Common.JsonApi.Repositories;
 
-public class GregResourceRepository<TResource, TId> : EntityFrameworkCoreRepository<TResource, TId>
+public class CustomResourceRepository<TResource, TId> : EntityFrameworkCoreRepository<TResource, TId>
     where TResource : class, IIdentifiable<TId>
 {
-    public GregResourceRepository(
-        GregRepositoryDependencies dependencies)
+    public CustomResourceRepository(
+        CustomResourceRepositoryDependencies dependencies)
         : base(dependencies.TargetedFields,
             dependencies.DbContextResolver,
             dependencies.ResourceGraph,

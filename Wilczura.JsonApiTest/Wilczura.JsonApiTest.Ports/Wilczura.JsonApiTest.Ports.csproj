@@ -10,4 +10,9 @@
     <ProjectReference Include="..\Wilczura.Common.Ports\Wilczura.Common.Ports.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Publishers\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
 </Project>
