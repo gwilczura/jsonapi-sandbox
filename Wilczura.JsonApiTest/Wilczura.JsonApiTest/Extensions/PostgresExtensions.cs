@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Npgsql;
-using Wilczura.JsonApiTest.Data;
+using Wilczura.JsonApiTest.Adapters.Postgres;
 
 namespace Wilczura.JsonApiTest.Extensions;
 

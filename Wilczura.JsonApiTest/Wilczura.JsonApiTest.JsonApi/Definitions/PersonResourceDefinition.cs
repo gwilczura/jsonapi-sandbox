@@ -3,7 +3,7 @@ using JsonApiDotNetCore.Repositories;
 using Wilczura.Common.JsonApi.ResourceDefinitions;
 using Wilczura.Common.Ports.Publishers;
 using Wilczura.Common.Ports.Repositories;
-using Wilczura.JsonApiTest.Data.Entities;
+using Wilczura.JsonApiTest.Adapters.Postgres.Entities;
 
 namespace Wilczura.JsonApiTest.JsonApi.Definitions;
 

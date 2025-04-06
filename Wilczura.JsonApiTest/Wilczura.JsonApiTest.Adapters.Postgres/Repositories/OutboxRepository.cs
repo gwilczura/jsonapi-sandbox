@@ -1,16 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Wilczura.Common.Ports.Repositories;
-using Wilczura.JsonApiTest.Data.Entities;
+using Wilczura.JsonApiTest.Adapters.Postgres.Entities;
 
-namespace Wilczura.JsonApiTest.Data.Repositories;
+namespace Wilczura.JsonApiTest.Adapters.Postgres.Repositories;
 
 public class OutboxRepository : IOutboxRepository
 {
     private readonly TestDbContext _context;
     public OutboxRepository(IDbContextProvider dbContextProvider)
     {
-        var context = dbContextProvider.GetContext() as TestDbContext;
-        if(context == null)
+        if (dbContextProvider.GetContext() is not TestDbContext context)
         {
             throw new Exception("TestDbContext is null");
         }

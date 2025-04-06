@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Wilczura.Common.JsonApi.Controllers;
-using Wilczura.JsonApiTest.Data.Entities;
+using Wilczura.JsonApiTest.Adapters.Postgres.Entities;
 
 namespace Wilczura.JsonApiTest.Controllers;
 

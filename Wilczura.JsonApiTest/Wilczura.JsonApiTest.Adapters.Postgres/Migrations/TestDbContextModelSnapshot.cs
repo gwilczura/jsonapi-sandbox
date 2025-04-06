@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using Wilczura.JsonApiTest.Data;
+
 
 #nullable disable
 
-namespace Wilczura.JsonApiTest.Data.Migrations
+namespace Wilczura.JsonApiTest.Adapters.Postgres.Migrations
 {
     [DbContext(typeof(TestDbContext))]
     partial class TestDbContextModelSnapshot : ModelSnapshot

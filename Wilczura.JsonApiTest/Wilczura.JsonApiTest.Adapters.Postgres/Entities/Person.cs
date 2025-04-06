@@ -2,9 +2,9 @@
 using JsonApiDotNetCore.Resources.Annotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Wilczura.JsonApiTest.Data.Entities;
+namespace Wilczura.JsonApiTest.Adapters.Postgres.Entities;
 
-[Resource(PublicName ="persons", GenerateControllerEndpoints = JsonApiDotNetCore.Controllers.JsonApiEndpoints.None)]
+[Resource(PublicName = "persons", GenerateControllerEndpoints = JsonApiDotNetCore.Controllers.JsonApiEndpoints.None)]
 public class Person : Identifiable<int>
 {
     [Attr]

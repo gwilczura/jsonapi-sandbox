@@ -5,15 +5,16 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using Wilczura.JsonApiTest.Data;
+using Wilczura.JsonApiTest.Adapters.Postgres;
+
 
 #nullable disable
 
-namespace Wilczura.JsonApiTest.Data.Migrations
+namespace Wilczura.JsonApiTest.Adapters.Postgres.Migrations
 {
     [DbContext(typeof(TestDbContext))]
-    [Migration("20250403211839_init")]
-    partial class init
+    [Migration("20250403212322_view")]
+    partial class view
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

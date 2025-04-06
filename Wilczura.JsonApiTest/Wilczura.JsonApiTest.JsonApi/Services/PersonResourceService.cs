@@ -6,7 +6,7 @@ using JsonApiDotNetCore.Resources;
 using JsonApiDotNetCore.Services;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics.CodeAnalysis;
-using Wilczura.JsonApiTest.Data.Entities;
+using Wilczura.JsonApiTest.Adapters.Postgres.Entities;
 
 namespace Wilczura.JsonApiTest.JsonApi.Services;
 

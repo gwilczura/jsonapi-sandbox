@@ -1,6 +1,6 @@
 ﻿using JsonApiDotNetCore.Queries;
 using Wilczura.Common.JsonApi.Repositories;
-using Wilczura.JsonApiTest.Data.Entities;
+using Wilczura.JsonApiTest.Adapters.Postgres.Entities;
 
 namespace Wilczura.JsonApiTest.JsonApi.Repositories;
 

@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Wilczura.JsonApiTest.Data.Migrations
+namespace Wilczura.JsonApiTest.Adapters.Postgres.Migrations
 {
     /// <inheritdoc />
     public partial class view : Migration

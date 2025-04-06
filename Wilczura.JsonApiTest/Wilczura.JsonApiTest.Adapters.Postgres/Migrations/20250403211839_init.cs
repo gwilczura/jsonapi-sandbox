@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace Wilczura.JsonApiTest.Data.Migrations
+namespace Wilczura.JsonApiTest.Adapters.Postgres.Migrations
 {
     /// <inheritdoc />
     public partial class init : Migration

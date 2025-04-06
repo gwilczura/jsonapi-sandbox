@@ -17,8 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Wilczura.JsonApiTest.Adapters.Postgres\Wilczura.JsonApiTest.Adapters.Postgres.csproj" />
     <ProjectReference Include="..\Wilczura.JsonApiTest.Adapters.ServiceBus\Wilczura.JsonApiTest.Adapters.ServiceBus.csproj" />
-    <ProjectReference Include="..\Wilczura.JsonApiTest.Data\Wilczura.JsonApiTest.Data.csproj" />
     <ProjectReference Include="..\Wilczura.JsonApiTest.JsonApi\Wilczura.JsonApiTest.JsonApi.csproj" />
   </ItemGroup>
 

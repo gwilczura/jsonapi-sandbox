@@ -2,7 +2,7 @@
 using JsonApiDotNetCore.Resources.Annotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Wilczura.JsonApiTest.Data.Entities;
+namespace Wilczura.JsonApiTest.Adapters.Postgres.Entities;
 
 [Resource(PublicName = "person-details", GenerateControllerEndpoints = JsonApiDotNetCore.Controllers.JsonApiEndpoints.None)]
 public class PersonDetailsView : Identifiable<int>
