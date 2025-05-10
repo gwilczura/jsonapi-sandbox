@@ -22,8 +22,4 @@
     <ProjectReference Include="..\Wilczura.JsonApiTest.JsonApi\Wilczura.JsonApiTest.JsonApi.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>

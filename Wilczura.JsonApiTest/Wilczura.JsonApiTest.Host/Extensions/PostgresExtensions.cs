@@ -2,7 +2,7 @@
 using Npgsql;
 using Wilczura.JsonApiTest.Adapters.Postgres;
 
-namespace Wilczura.JsonApiTest.Extensions;
+namespace Wilczura.JsonApiTest.Host.Extensions;
 
 public static class PostgresExtensions
 {

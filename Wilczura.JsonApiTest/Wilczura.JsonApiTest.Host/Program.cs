@@ -6,7 +6,7 @@ using Wilczura.Common.Ports.Repositories;
 using Wilczura.JsonApiTest.Adapters.Postgres;
 using Wilczura.JsonApiTest.Adapters.Postgres.Repositories;
 using Wilczura.JsonApiTest.Adapters.ServiceBus.Publishers;
-using Wilczura.JsonApiTest.Extensions;
+using Wilczura.JsonApiTest.Host.Extensions;
 using Wilczura.JsonApiTest.JsonApi.Definitions;
 using Wilczura.JsonApiTest.JsonApi.Repositories;
 using Wilczura.JsonApiTest.JsonApi.Services;
@@ -16,7 +16,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.AddJsonFile("appsettings.local.json", optional: true);
 // Add services to the container.
 var logger = builder.GetStartupLogger();
-builder.AddPostgres(string.Empty,"products", logger);
+builder.AddPostgres(string.Empty, "products", logger);
 
 builder.Services.AddTransient(typeof(CustomControllerDependencies<,>));
 builder.Services.AddTransient(typeof(CustomResourceRepositoryDependencies));

@@ -2,12 +2,12 @@
 using Wilczura.Common.JsonApi.Controllers;
 using Wilczura.JsonApiTest.Adapters.Postgres.Entities;
 
-namespace Wilczura.JsonApiTest.Controllers;
+namespace Wilczura.JsonApiTest.Host.Controllers;
 
-[Route("[controller]")]
-public class PersonsController : CustomController<Person, int>
+[Route("person-details")]
+public class PersonDetailsController : CustomController<PersonDetailsView, int>
 {
-    public PersonsController(CustomControllerDependencies<Person,int> dependencies) 
+    public PersonDetailsController(CustomControllerDependencies<PersonDetailsView, int> dependencies)
         : base(dependencies)
     {
     }
@@ -19,3 +19,4 @@ public class PersonsController : CustomController<Person, int>
         return base.GetAsync(cancellationToken);
     }
 }
+
