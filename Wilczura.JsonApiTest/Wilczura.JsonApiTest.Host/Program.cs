@@ -1,4 +1,5 @@
 using JsonApiDotNetCore.Configuration;
+using JsonApiDotNetCore.OpenApi.Swashbuckle;
 using Wilczura.Common.JsonApi.Controllers;
 using Wilczura.Common.JsonApi.Repositories;
 using Wilczura.Common.Ports.Publishers;
@@ -34,14 +35,13 @@ builder.Services.AddControllers();
 // builder.Services.AddEndpointsApiExplorer();
 // builder.Services.AddSwaggerGen();
 
+builder.Services.AddOpenApiForJsonApi();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-// if (app.Environment.IsDevelopment())
-// {
-//     app.UseSwagger();
-//     app.UseSwaggerUI();
-// }
+app.UseSwaggerUI();
+app.UseSwagger();
 
 app.UseHttpsRedirection();
 
